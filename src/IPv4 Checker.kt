@@ -1,45 +1,30 @@
-fun isValidIpv4(ipAddress: String): Boolean {
-    var dotCounter = 0 // Tracks the number of dots in the IP address
-    var segmentStartIndex = 0 // Tracks the starting index of the current segment
-    val totalLength = ipAddress.length
+fun isValidIpv4(ip: String): Boolean {
+    // Split the input string by dots to get the segments
+    val segments = ip.split('.')
 
-    // Basic checks: empty string, starts or ends with a dot
-    if (totalLength == 0 || ipAddress[0] == '.' || ipAddress[totalLength - 1] == '.') return false
+    // Check if there are exactly 4 segments
+    if (segments.size != 4) return false
 
-    var currentIndex = 0
-    while (currentIndex < totalLength) {
-        if (ipAddress[currentIndex] == '.') {
-            dotCounter++
-            // Too many dots or empty segment
-            if (dotCounter > 3 || currentIndex == segmentStartIndex) return false
-
-            // Check for leading zeros in multi-digit numbers
-            if (currentIndex - segmentStartIndex > 1 && ipAddress[segmentStartIndex] == '0') return false
-
-            // Extract the segment and validate its range
-            val segmentValue = ipAddress.substring(segmentStartIndex, currentIndex).toIntOrNull() ?: return false
-            if (segmentValue !in 0..255) return false
-
-            // Move to the next segment
-            segmentStartIndex = currentIndex + 1
-        } else if (ipAddress[currentIndex] !in '0'..'9') {
-            // Invalid character detected (not a digit or dot)
-            return false
-        }
-        currentIndex++
+    // Validate each segment
+    for (segment in segments) {
+        // Ensure each segment is numeric and does not have leading zeros, unless it's just '0'
+        if (!isValidSegment(segment)) return false
     }
 
-    // The address must contain exactly 3 dots, and the last segment must not be empty
-    if (dotCounter != 3 || segmentStartIndex >= totalLength) return false
+    return true
+}
 
-    // Check the last segment for leading zeros
-    if (totalLength - segmentStartIndex > 1 && ipAddress[segmentStartIndex] == '0') return false
+// Function to validate a single segment of the IP address
+fun isValidSegment(segment: String): Boolean {
+    // Check if segment is numeric
+    if (segment.isEmpty() || segment.length > 3 || segment.toIntOrNull() == null) return false
 
-    // Extract and validate the last segment
-    val lastSegmentValue = ipAddress.substring(segmentStartIndex, totalLength).toIntOrNull() ?: return false
-    if (lastSegmentValue !in 0..255) return false
+    // Check if the segment is within the valid range (0 to 255)
+    val segmentInt = segment.toInt()
+    if (segmentInt !in 0..255) return false
 
-    return true // If all checks pass, it's a valid IPv4 address
+    // Check if there are leading zeros in a segment that is not '0'
+    return !(segment.startsWith("0") && segment != "0")
 }
 
 
