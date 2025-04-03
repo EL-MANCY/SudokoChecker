@@ -1,0 +1,142 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0" version="26.2.2">
+  <diagram name="Page-1" id="5flPqGxTb3IPwQiw2_9p">
+    <mxGraphModel dx="1813" dy="858" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-2" target="EKHQ2G5SizgUJryMUjf1-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-2" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="30" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-3" target="EKHQ2G5SizgUJryMUjf1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-3" value="SET size = board.size&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;boxSize = sqrt(size).toInt()&lt;/div&gt;&lt;div&gt;Init rows, cols, boxes&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="210" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-8" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-5" target="EKHQ2G5SizgUJryMUjf1-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-5" value="Any Row length&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;≠ size?&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="340" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-7" target="EKHQ2G5SizgUJryMUjf1-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-7" value="Return false" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-11" target="EKHQ2G5SizgUJryMUjf1-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-53" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-11" target="EKHQ2G5SizgUJryMUjf1-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-11" value="&lt;div&gt;For r = 0 to size -1&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-13" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="680" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-15" target="EKHQ2G5SizgUJryMUjf1-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-15" value="&lt;div&gt;For c = 0 to&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;size-1&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="690" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-20" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-17" target="EKHQ2G5SizgUJryMUjf1-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-17" value="&lt;br&gt;&lt;div&gt;c &amp;gt;=&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;board[r].length?&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-19" target="EKHQ2G5SizgUJryMUjf1-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-19" value="Return False" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="960" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-22" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-21" target="EKHQ2G5SizgUJryMUjf1-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-21" target="EKHQ2G5SizgUJryMUjf1-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-21" value="num =&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;board[r][c]&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="960" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-23" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1090" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-30" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-27" target="EKHQ2G5SizgUJryMUjf1-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-35" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-27" target="EKHQ2G5SizgUJryMUjf1-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-27" value="&#xa;&lt;div&gt;num == &#39;-&#39;?&lt;/div&gt;&#xa;&#xa;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1090" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-29" target="EKHQ2G5SizgUJryMUjf1-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-29" value="Continue" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="1290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-38" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-34" target="EKHQ2G5SizgUJryMUjf1-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-42" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-34" target="EKHQ2G5SizgUJryMUjf1-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-34" value="&lt;br&gt;&lt;div style=&quot;forced-color-adjust: none; box-shadow: none !important;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; box-shadow: none !important;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; box-shadow: none !important;&quot;&gt;num not in&amp;nbsp;&lt;span style=&quot;forced-color-adjust: none; box-shadow: none !important; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&#39;1&#39;..&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; box-shadow: none !important;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&#39;0&#39;+size)&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;or num == &#39;0&#39;?&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; box-shadow: none !important;&quot;&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(255, 255, 255); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(27, 29, 30); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; box-shadow: none !important;&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="1220" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-37" target="EKHQ2G5SizgUJryMUjf1-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-37" value="Return False" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="1440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-39" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1570" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-41" target="EKHQ2G5SizgUJryMUjf1-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-41" value="&lt;br&gt;&lt;div&gt;boxIndex =&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(r/boxSize) *&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;boxSize +&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(c/boxSize)&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="1250" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-46" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-43" target="EKHQ2G5SizgUJryMUjf1-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-50" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-43" target="EKHQ2G5SizgUJryMUjf1-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-43" value="&lt;br&gt;&lt;div&gt;Duplicates in&lt;/div&gt;&lt;div&gt;rows[r], cols[c]&lt;/div&gt;&lt;div&gt;&lt;div&gt;or boxes[boxIdx]&lt;/div&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1440" width="180" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-45" target="EKHQ2G5SizgUJryMUjf1-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-45" value="Return False" style="whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-47" value="END" style="ellipse;whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="790" y="1770" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EKHQ2G5SizgUJryMUjf1-49" target="EKHQ2G5SizgUJryMUjf1-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-49" value="Return True" style="whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="1490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EKHQ2G5SizgUJryMUjf1-51" value="END" style="ellipse;whiteSpace=wrap;html=1;resizable=1;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="1620" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

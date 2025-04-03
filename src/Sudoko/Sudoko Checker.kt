@@ -1,3 +1,5 @@
+package Sudoko
+
 import kotlin.math.sqrt
 
 fun main() {

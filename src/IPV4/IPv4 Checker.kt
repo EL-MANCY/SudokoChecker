@@ -1,3 +1,5 @@
+package IPV4
+
 fun isValidIpv4(ip: String): Boolean {
     // Split the input string by dots to get the segments
     val segments = ip.split('.')
@@ -32,35 +34,35 @@ fun isValidSegment(segment: String): Boolean {
 fun main() {
     // Valid IPv4 addresses (should return true)
     println(
-        check(
+        Sudoko.check(
             "Valid IPv4: ",
             isValidIpv4("192.168.1.1"),
             true
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Valid IPv4: ",
             isValidIpv4("0.0.0.0"),
             true
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Valid IPv4:",
             isValidIpv4("255.255.255.255"),
             true
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Valid IPv4: ",
             isValidIpv4("1.2.3.4"),
             true
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Valid IPv4: ",
             isValidIpv4("172.16.254.1"),
             true
@@ -70,21 +72,21 @@ fun main() {
     // Invalid IPv4 addresses (should return false)
     // Wrong number of segments
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (too few segments)",
             isValidIpv4("192.168.1"),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4: (too many segments)",
             isValidIpv4("192.168.1.1.1"),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (empty string)",
             isValidIpv4(""),
             false
@@ -93,21 +95,21 @@ fun main() {
 
     // Out-of-range segments
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (segment > 255)",
             isValidIpv4("256.168.1.1"),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (segment > 255)",
             isValidIpv4("192.168.1.256"),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (negative segment)",
             isValidIpv4("192.168.1.-1"),
             false
@@ -116,14 +118,14 @@ fun main() {
 
     // Leading zeros
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (leading zeros)",
             isValidIpv4("192.168.01.1"),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (leading zeros)",
             isValidIpv4("192.168.001.1"),
             false
@@ -132,21 +134,21 @@ fun main() {
 
     // Non-numeric segments and invalid characters
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (non-numeric segment)",
             isValidIpv4("192.168.1.a"),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (trailing dot)",
             isValidIpv4("192.168.1.1."),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (leading dot)",
             isValidIpv4(".192.168.1.1"),
             false
@@ -155,14 +157,14 @@ fun main() {
 
     // Empty segments and malformed inputs
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (empty segment)",
             isValidIpv4("192..1.1"),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (empty segment)",
             isValidIpv4("192.168..1"),
             false
@@ -171,14 +173,14 @@ fun main() {
 
     // Spaces and other invalid formats
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (space at end)",
             isValidIpv4("192.168.1.1 "),
             false
         )
     )
     println(
-        check(
+        Sudoko.check(
             "Invalid IPv4:  (port number)",
             isValidIpv4("192.168.1.1:80"),
             false
