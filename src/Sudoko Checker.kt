@@ -237,66 +237,60 @@ fun main() {
 
 
 fun isValidSudoku(board: List<String>): Boolean {
-    val gridSize = board.size
-    val subgridSize = sqrt(gridSize.toDouble()).toInt()
+    val size = board.size
+    val boxSize = sqrt(size.toDouble()).toInt()
 
-    if (subgridSize * subgridSize != gridSize) return false // Ensure board size is a perfect square
-    if (board.any { it.length != gridSize }) return false  // Ensure all rows have the correct length
+    // Ensure all rows have the correct length
+    if (board.any { it.length != size }) return false
 
-    for (row in 0 until gridSize) {
-        for (col in 0 until gridSize) {
-            val cellValue = board[row][col]
+    val rows = Array(size) { mutableSetOf<Char>() }
+    val cols = Array(size) { mutableSetOf<Char>() }
+    val boxes = Array(size) { mutableSetOf<Char>() }
 
-            if (cellValue != '-' && (cellValue !in '1'..('0' + gridSize))) return false  // Validate character range
+    for (r in 0 until size) {
+        for (c in 0 until size) {
+            if (c >= board[r].length) return false // Prevent out-of-bounds access
 
-            if (cellValue == '-') continue  // Skip empty cells
+            val num = board[r][c]
 
-            // Check row
-            for (otherCol in 0 until gridSize) {
-                if (otherCol != col && board[row][otherCol] == cellValue) return false
-            }
+            if (num == '-') continue // Ignore empty cells
 
-            // Check column
-            for (otherRow in 0 until gridSize) {
-                if (otherRow != row && board[otherRow][col] == cellValue) return false
-            }
-
+            // Validate character range
+            if (num !in '1'..('0' + size) || num == '0') return false
             /**
-            (0,0) (0,0) (0,0) | (0,3) (0,3) (0,3) | (0,6) (0,6) (0,6)
+            0 0 0 | 1 1 1 | 2 2 2
 
-            (0,0) (0,0) (0,0) | (0,3) (0,3) (0,3) | (0,6) (0,6) (0,6)
+            0 0 0 | 1 1 1 | 2 2 2
 
-            (0,0) (0,0) (0,0) | (0,3) (0,3) (0,3) | (0,6) (0,6) (0,6)
+            0 0 0 | 1 1 1 | 2 2 2
 
-            x--------------- ------------------- ----------------
+            ------+-------+------
 
-            (3,0) (3,0) (3,0) | (3,3) (3,3) (3,3) | (3,6) (3,6) (3,6)
+            3 3 3 | 4 4 4 | 5 5 5
 
-            (3,0) (3,0) (3,0) | (3,3) (3,3) (3,3) | (3,6) (3,6) (3,6)
+            3 3 3 | 4 4 4 | 5 5 5
 
-            (3,0) (3,0) (3,0) | (3,3) (3,3) (3,3) | (3,6) (3,6) (3,6)
+            3 3 3 | 4 4 4 | 5 5 5
 
-            x--------------- ------------------- ----------------
+            ------+-------+------
 
-            (6,0) (6,0) (6,0) | (6,3) (6,3) (6,3) | (6,6) (6,6) (6,6)
+            6 6 6 | 7 7 7 | 8 8 8
 
-            (6,0) (6,0) (6,0) | (6,3) (6,3) (6,3) | (6,6) (6,6) (6,6)
+            6 6 6 | 7 7 7 | 8 8 8
 
-            (6,0) (6,0) (6,0) | (6,3) (6,3) (6,3) | (6,6) (6,6) (6,6)
-
+            6 6 6 | 7 7 7 | 8 8 8
              */
-            // Check subgrid
-            val subgridStartRow = (row / subgridSize) * subgridSize
-            val subgridStartCol = (col / subgridSize) * subgridSize
-            for (subRowOffset in 0 until subgridSize) {
-                for (subColOffset in 0 until subgridSize) {
-                    val subRow = subgridStartRow + subRowOffset
-                    val subCol = subgridStartCol + subColOffset
-                    if ((subRow != row || subCol != col) && board[subRow][subCol] == cellValue) return false
-                }
+
+            //             ((what row box range)    *   (start row of the box)      +   which(what col box range)
+            val boxIndex =      (r / boxSize)       *           boxSize             +        (c / boxSize)
+
+            // Check for duplicates
+            if (!rows[r].add(num) || !cols[c].add(num) || !boxes[boxIndex].add(num)) {
+                return false
             }
         }
     }
+
     return true
 }
 
